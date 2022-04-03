@@ -18,6 +18,11 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ###### *When we say ‘local authority level’, we mean that each row in the final spreadsheet should represent one local authority. The local authorities to include are the ones from the “la_name” column of the dataset.
 
+#### 🧑‍💻 Screenshot of terminal from example of some extracted data:
+
+<img width="274" alt="Screenshot 2022-04-04 at 00 50 47" src="https://user-images.githubusercontent.com/45575016/161454422-9a4a4566-ef35-4d3d-9ed3-d2427ec60dbd.png">
+
+
 # 💠 Part 2: combining multiple datasets and standardising
 
 #### Using the two data files found on this page:
