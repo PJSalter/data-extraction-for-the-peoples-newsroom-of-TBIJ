@@ -115,6 +115,29 @@
 
 // // local authority levels
 
+//**************************** OFFICIAL CODE BEING USED FOR EXTRACTING DATA ****************************//
+
+// Import dependencies
+const fs = require("fs");
+const csv = require("csvtojson");
+const { Parser } = require("json2csv");
+
+(async () => {
+
+    // Load the la data of schools
+    const schoolsInUK = await csv().fromFile("sen_school_level_underlying_data.csv");
+
+    // Show the schools in uk.
+    console.log(schoolsInUK);
+
+    // Saved the data that is needed
+    const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
+    fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
+
+})();
+
+
+
 // // stage two will be: 
 
 // /*
@@ -151,38 +174,6 @@ Part 3: Analyse and present a finding
 Have a look around in the dataset - perhaps do some basic analysis - and see what interesting things emerge from the dataset or from the process. Ultimately what you need to do now is articulate what you see as the one significant finding (in no more than 50 words). 
 
 */
-
-
-
-// Import dependencies
-const fs = require("fs");
-const csv = require("csvtojson");
-const { Parser } = require("json2csv");
-
-(async () => {
-
-    // Load the la data of schools
-    const schoolsInUK = await csv().fromFile("sen_school_level_underlying_data.csv");
-
-    // Show the schools in uk.
-    console.log(schoolsInUK);
-
-    // Modify the school data
-    console.log(schoolsInUK[0]);
-
-    // Saved the data that is needed
-    const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
-    fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
-
-    //console.log(schoolsInUK);
-
-    // if (schoolsInCsv[1] && schoolsInCsv[2] === 1) {
-    //     return schoolsInCsv[1] && schoolsInCsv[2];
-    // } else {
-
-    // }
-
-})();
 
 
 
