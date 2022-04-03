@@ -27,102 +27,102 @@
 
 // because I already have node.js I can use thies line of code instantly.
 // requiring the the Node.js fs modules
-const fs = require('fs');
-console.log(fs)
+// const fs = require('fs');
+// console.log(fs)
 
-// picking up the file path.
-// The Path module provides a way of working with directories and file paths.
-const path = require('path');
-//console.log(path)
-let filename = path.parse('/sen_school_level_underlying_data.csv');
-//console.log(filename);
+// // picking up the file path.
+// // The Path module provides a way of working with directories and file paths.
+// const path = require('path');
+// //console.log(path)
+// let filename = path.parse('/sen_school_level_underlying_data.csv');
+// //console.log(filename);
 
 
-//*********************** regex version of the function *************************//
+// //*********************** regex version of the function *************************//
 
-// const csvParse = (filename) => {
+// // const csvParse = (filename) => {
     
-//     console.log(filename)
+// //     console.log(filename)
 
-//     this.rows = [];
+// //     this.rows = [];
 
-//     let fieldRegEx = new RegExp('(?:\s*"((?:""|[^"])*)"\s*|\s*((?:""|[^",\r\n])*(?:""|[^"\s,\r\n]))?\s*)(,|[\r\n]+|$)', "g"); 
-//     console.log(fieldRegEx);
-//     let row = [];
-//     console.log(row);
-//     let currMatch = null;
+// //     let fieldRegEx = new RegExp('(?:\s*"((?:""|[^"])*)"\s*|\s*((?:""|[^",\r\n])*(?:""|[^"\s,\r\n]))?\s*)(,|[\r\n]+|$)', "g"); 
+// //     console.log(fieldRegEx);
+// //     let row = [];
+// //     console.log(row);
+// //     let currMatch = null;
     
 
-//     while (currMatch = fieldRegEx.exec(this.filename))
-//     {
-//         row.push([currMatch[1], currMatch[2]].join('')); // concatenate with potential nulls
+// //     while (currMatch = fieldRegEx.exec(this.filename))
+// //     {
+// //         row.push([currMatch[1], currMatch[2]].join('')); // concatenate with potential nulls
 
-//         if (currMatch[3] != ',')
-//         {
-//             this.rows.push(row);
-//             row = [];
-//         }
+// //         if (currMatch[3] != ',')
+// //         {
+// //             this.rows.push(row);
+// //             row = [];
+// //         }
 
-//         if (currMatch[3].length == 0)
-//             break;
-//     }
-//     console.log(currMatch)
-//     return currMatch;
+// //         if (currMatch[3].length == 0)
+// //             break;
+// //     }
+// //     console.log(currMatch)
+// //     return currMatch;
+// // }
+
+// // csvParse(filename);
+
+// //******************* function to extract and add into an object *****************//
+
+// // 1. the total number of schools in the local authority.
+// // 2. the total number of schools with "SEN or resourced provisions units" (those are the ones marked with a "1" in either the “SEN_Unit” or “RP_Unit” column)
+// // 3. The total number of pupils (from the “Total pupils” column).
+// // 4. The total number of pupils with and EHC plan (from the “EHC plan” column).
+
+// const csvToObjs = (fs) => {
+    
+//     // let lines = filename.split(/\r\n|\n/);
+//     //filename = document.location + '';
+//     //console.log(filename);
+
+
+//     const result = typeof fs === 'string' ? fs.split('/n') : '';
+//     console.log(result); 
+
+
+//     // let lines = filename.split('/n');
+//     // console.log(lines);
+//     let piping = result.split('|')
+//     //console.log(piping);
+//     // console.log(typeof document.location);
+//     let [headings, ...entries] = piping;
+//     //console.log([headings, ...entries])
+//     headings = headings.split(',');
+//     let objs = [];
+//     entries.map(entry => {
+//         obj = entry.split(',');
+//         objs.push(Object.fromEntries(headings.map((head, i) => [head, obj[i]])));
+//     })
+//     return objs;
 // }
 
-// csvParse(filename);
+// csvToObjs(fs)
 
-//******************* function to extract and add into an object *****************//
-
-// 1. the total number of schools in the local authority.
-// 2. the total number of schools with "SEN or resourced provisions units" (those are the ones marked with a "1" in either the “SEN_Unit” or “RP_Unit” column)
-// 3. The total number of pupils (from the “Total pupils” column).
-// 4. The total number of pupils with and EHC plan (from the “EHC plan” column).
-
-const csvToObjs = (filename) => {
-    
-    // let lines = filename.split(/\r\n|\n/);
-    //filename = document.location + '';
-    //console.log(filename);
+// module.exports = csvToObjs
 
 
-    const result = typeof filename === 'string' ? filename.split('/n') : '';
-    console.log(result); 
+// // module.exports = csvParse
 
+// // local authority levels
 
-    // let lines = filename.split('/n');
-    // console.log(lines);
-    let piping = result.split('|')
-    //console.log(piping);
-    // console.log(typeof document.location);
-    let [headings, ...entries] = piping;
-    //console.log([headings, ...entries])
-    headings = headings.split(',');
-    let objs = [];
-    entries.map(entry => {
-        obj = entry.split(',');
-        objs.push(Object.fromEntries(headings.map((head, i) => [head, obj[i]])));
-    })
-    return objs;
-}
+// // stage two will be: 
 
-csvToObjs(filename)
-
-module.exports = csvToObjs
-
-
-// module.exports = csvParse
-
-// local authority levels
-
-// stage two will be: 
-
-/*
-Part 2: combining multiple datasets and standardising
-Using the two data files found on this page:
-“Special schools and colleges approved under section 41 in England and Wales”
-“Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)”
-*/
+// /*
+// Part 2: combining multiple datasets and standardising
+// Using the two data files found on this page:
+// “Special schools and colleges approved under section 41 in England and Wales”
+// “Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)”
+// */
 
 
 
@@ -131,9 +131,9 @@ Using the two data files found on this page:
 
 
 
-// for this second stage I am thinking of using:
+// // for this second stage I am thinking of using:
 
-// **************** Filter Higher Order Function ********************** //
+// // **************** Filter Higher Order Function ********************** //
 
 
 
@@ -151,6 +151,40 @@ Part 3: Analyse and present a finding
 Have a look around in the dataset - perhaps do some basic analysis - and see what interesting things emerge from the dataset or from the process. Ultimately what you need to do now is articulate what you see as the one significant finding (in no more than 50 words). 
 
 */
+
+
+
+// Import dependencies
+const fs = require("fs");
+const csv = require("csvtojson");
+const { Parser } = require("json2csv");
+
+(async () => {
+
+    // Load the la data of schools
+    const schoolsInUK = await csv().fromFile("sen_school_level_underlying_data.csv");
+
+    // Show the schools in uk.
+    console.log(schoolsInUK);
+
+    // Modify the school data
+    console.log(schoolsInUK[0]);
+
+    // Saved the data that is needed
+    const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
+    fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
+
+    //console.log(schoolsInUK);
+
+    // if (schoolsInCsv[1] && schoolsInCsv[2] === 1) {
+    //     return schoolsInCsv[1] && schoolsInCsv[2];
+    // } else {
+
+    // }
+
+})();
+
+
 
 
 
