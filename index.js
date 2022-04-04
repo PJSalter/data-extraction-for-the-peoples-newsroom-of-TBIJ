@@ -133,12 +133,12 @@ const { Parser } = require("json2csv");
     //console.log(iss)
 
     let indSpec = await csv().fromFile("IndSpec_not_s41.csv");
-    console.log(indSpec)
+    //console.log(indSpec)
 
     // Saved the data that is needed
     const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
     fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
-    //console.log(schoolsInCsv)
+    console.log(schoolsInCsv)
 
      const issSchools = new Parser({ fields: ["field2", "field3", "field5", "field6"] }).parse(iss);
       fs.writeFileSync("Approved_S41_Full_List__updated_22_03_22.csv", issSchools);
@@ -148,46 +148,7 @@ const { Parser } = require("json2csv");
     const indSpecSchools = new Parser({fields: ["GIAS reference", "Local Authority", "School Name", "Section41 Approval"]}).parse(indSpec);
     fs.writeFileSync("IndSpec_not_s41.csv", indSpecSchools);
 
-    // Promise.all([
-    //     schoolsInCsv.csv("sen_school_level_underlying_data.csv"),
-    //     schoolsInCsv.csv("Approved_S41_Full_List__updated_22_03_22.csv"),
-    //     schoolsInCsv.csv("IndSpec_not_s41.csv")
-    // ]).then(function(allData) {
-    //     console.log(schoolsInCsv.merge(allData));
-    // });
-
-
 })();
-
-
-
-
-
-// // stage two will be: 
-
-// /*
-// Part 2: combining multiple datasets and standardising
-// Using the two data files found on this page:
-// “Special schools and colleges approved under section 41 in England and Wales”
-// “Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)”
-// */
-
-
-
-
-
-
-
-
-// // for this second stage I am thinking of using:
-
-// // **************** Filter Higher Order Function ********************** //
-
-
-
-
-
-
 
 
 // ***************** Stage Three *********************** //
