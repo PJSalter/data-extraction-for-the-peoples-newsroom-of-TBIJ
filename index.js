@@ -126,15 +126,37 @@ const { Parser } = require("json2csv");
 
     // Load the la data of schools
     const schoolsInUK = await csv().fromFile("sen_school_level_underlying_data.csv");
-
     // Show the schools in uk.
-    console.log(schoolsInUK);
+    //console.log(schoolsInUK);
+
+    let iss = await csv().fromFile("Approved_S41_Full_List__updated_22_03_22.csv");
+    console.log(iss)
+
+    //let indSpec = await csv().fromFile("IndSpec_not_s41.csv");
+    //console.log(indSpec)
 
     // Saved the data that is needed
     const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
     fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
+    //console.log(schoolsInCsv)
+
+     const issSchools = new Parser({ fields: ["field2", "field3", "field5", "field6"] }).parse(iss);
+      fs.writeFileSync("Approved_S41_Full_List__updated_22_03_22.csv", issSchools);
+    //console.log(issSchools)
+    // fs.writeFileSync("IndSpec_not_s41.csv", schoolsInCsv);
+
+    // Promise.all([
+    //     schoolsInCsv.csv("sen_school_level_underlying_data.csv"),
+    //     schoolsInCsv.csv("Approved_S41_Full_List__updated_22_03_22.csv"),
+    //     schoolsInCsv.csv("IndSpec_not_s41.csv")
+    // ]).then(function(allData) {
+    //     console.log(schoolsInCsv.merge(allData));
+    // });
+
 
 })();
+
+
 
 
 
