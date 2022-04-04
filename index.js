@@ -142,11 +142,12 @@ const { Parser } = require("json2csv");
 
      const issSchools = new Parser({ fields: ["field2", "field3", "field5", "field6"] }).parse(iss);
       fs.writeFileSync("Approved_S41_Full_List__updated_22_03_22.csv", issSchools);
-    //console.log(issSchools)
+    console.log(issSchools)
 
     //Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)
     const indSpecSchools = new Parser({fields: ["GIAS reference", "Local Authority", "School Name", "Section41 Approval"]}).parse(indSpec);
     fs.writeFileSync("IndSpec_not_s41.csv", indSpecSchools);
+    console.log(indSpecSchools)
 
 })();
 
