@@ -130,10 +130,10 @@ const { Parser } = require("json2csv");
     //console.log(schoolsInUK);
 
     let iss = await csv().fromFile("Approved_S41_Full_List__updated_22_03_22.csv");
-    console.log(iss)
+    //console.log(iss)
 
-    //let indSpec = await csv().fromFile("IndSpec_not_s41.csv");
-    //console.log(indSpec)
+    let indSpec = await csv().fromFile("IndSpec_not_s41.csv");
+    console.log(indSpec)
 
     // Saved the data that is needed
     const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
@@ -143,7 +143,10 @@ const { Parser } = require("json2csv");
      const issSchools = new Parser({ fields: ["field2", "field3", "field5", "field6"] }).parse(iss);
       fs.writeFileSync("Approved_S41_Full_List__updated_22_03_22.csv", issSchools);
     //console.log(issSchools)
-    // fs.writeFileSync("IndSpec_not_s41.csv", schoolsInCsv);
+
+    //Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)
+    const indSpecSchools = new Parser({fields: ["GIAS reference", "Local Authority", "School Name", "Section41 Approval"]}).parse(indSpec);
+    fs.writeFileSync("IndSpec_not_s41.csv", indSpecSchools);
 
     // Promise.all([
     //     schoolsInCsv.csv("sen_school_level_underlying_data.csv"),
