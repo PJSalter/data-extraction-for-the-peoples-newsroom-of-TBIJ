@@ -18,10 +18,9 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ###### *When we say ‘local authority level’, we mean that each row in the final spreadsheet should represent one local authority. The local authorities to include are the ones from the “la_name” column of the dataset.
 
-#### 🧑‍💻 Screenshot of terminal from example of some extracted data:
+### 🧑‍💻 Screenshot of terminal from example of some extracted data:
 
 <img width="274" alt="Screenshot 2022-04-04 at 00 50 47" src="https://user-images.githubusercontent.com/45575016/161454422-9a4a4566-ef35-4d3d-9ed3-d2427ec60dbd.png">
-
 
 # 💠 Part 2: combining multiple datasets and standardising
 
@@ -33,9 +32,13 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ###### Note: The spelling of the local authority names won’t always match and these files also include irregular names that will need interrogating before determining their local authority. We would like these irregular cases to be handled within the code. Do document and explain how those cases are handled and why! 
 
-#### screenshot from terminal view on extracted data from files of “Special schools and colleges approved under section 41 in England and Wales”
+#### 🧑‍🎓 screenshot from terminal view on extracted data from files of “Special schools and colleges approved under section 41 in England and Wales”
 
 <img width="418" alt="Screenshot 2022-04-05 at 14 13 25" src="https://user-images.githubusercontent.com/45575016/161762864-e9e06ccb-cf72-4405-801f-5cf15affcb5a.png">
+
+### 🏫 Screenshot on data file and extracted parts that seemed necessary to analyse:
+
+<img width="527" alt="Screenshot 2022-04-05 at 15 28 52" src="https://user-images.githubusercontent.com/45575016/161777722-ee54132f-7881-411a-9f97-d984d0eb44d8.png">
 
 
 # 💠 Part 3: Analyse and present a finding
