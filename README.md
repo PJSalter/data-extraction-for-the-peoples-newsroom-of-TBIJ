@@ -33,6 +33,11 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ###### Note: The spelling of the local authority names won’t always match and these files also include irregular names that will need interrogating before determining their local authority. We would like these irregular cases to be handled within the code. Do document and explain how those cases are handled and why! 
 
+#### screenshot from terminal view on extracted data from files of “Special schools and colleges approved under section 41 in England and Wales”
+
+<img width="418" alt="Screenshot 2022-04-05 at 14 13 25" src="https://user-images.githubusercontent.com/45575016/161762864-e9e06ccb-cf72-4405-801f-5cf15affcb5a.png">
+
+
 # 💠 Part 3: Analyse and present a finding
 
 
