@@ -115,6 +115,7 @@
 
 // // local authority levels
 
+//***************************** Part One and Part Two *******************************//
 //**************************** OFFICIAL CODE BEING USED FOR EXTRACTING DATA ****************************//
 
 // Import dependencies
@@ -152,7 +153,7 @@ const { Parser } = require("json2csv");
 })();
 
 
-// ***************** Stage Three *********************** //
+// ***************** part Three *********************** //
 
 /*
 Part 3: Analyse and present a finding
