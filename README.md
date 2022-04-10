@@ -46,10 +46,10 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ###### Have a look around in the dataset - perhaps do some basic analysis - and see what interesting things emerge from the dataset or from the process. Ultimately what you need to do now is articulate what you see as the one significant finding (in no more than 50 words). 
 
-# My Official Analysis and Finding from the Data
+# ✨ My Official Analysis and Finding from the Data ✨
 
-## What intrigued me the most from when I gathered my findings of the dataset was the initial amount of schools that run SEN Units, these are in place for a specific purpose to help to students with special needs. 
+#### What intrigued me the most from when I gathered my findings of the dataset was the initial amount of schools that run SEN Units, these are in place for a specific purpose to help to students with special needs. 
 
-## The SEN_UNIT included information that if a school contained these facilities in the certain local areas in the country.
+#### The SEN_UNIT included information that if a school contained these facilities in the certain local areas in the country.
 
-## I found the SEN data higher in specific areas such as Barking and Dagenham, Cornwall, Surrey and Leicestershire which was interesting, possibly because these are large areas of the country, with a higher level of population. In my report I found this to be a positive aspect, because knowing the statistics of where the children with special needs are located, raises awareness for more support to reach them.
+#### I found the SEN data higher in specific areas such as Barking and Dagenham, Cornwall, Surrey and Leicestershire which was interesting, possibly because these are large areas of the country, with a higher level of population. In my report I found this to be a positive aspect, because knowing the statistics of where the children with special needs are located, raises awareness for more support to reach them.
