@@ -50,3 +50,4 @@ Download the dataset of all schools in the UK. Under > Explore data and files > 
 
 ## What intrigued me the most from when I gathered my findings of the dataset was the initial amount of schools that run SEN Units, these are in place for a specific purpose to help to students with special needs. 
 
+## The SEN_UNIT included information that if a school contained these facilities in the certain local areas in the country.
