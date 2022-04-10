@@ -134,21 +134,21 @@ const { Parser } = require("json2csv");
     //console.log(iss)
 
     let indSpec = await csv().fromFile("IndSpec_not_s41.csv");
-    //console.log(indSpec)
+    console.log(indSpec)
 
     // Saved the data that is needed
     const schoolsInCsv = new Parser({ fields: ["la_name", "SEN_Unit", "RP_Unit", "Total pupils", "EHC plan"] }).parse(schoolsInUK);
     fs.writeFileSync("sen_school_level_underlying_data.csv", schoolsInCsv);
-    console.log(schoolsInCsv)
+    //console.log(schoolsInCsv)
 
      const issSchools = new Parser({ fields: ["field2", "field3", "field5", "field6"] }).parse(iss);
       fs.writeFileSync("Approved_S41_Full_List__updated_22_03_22.csv", issSchools);
-    console.log(issSchools)
+    //console.log(issSchools)
 
     //Independent special schools in England including non-maintained special schools (and excluding section 41 approved special schools and colleges)
     const indSpecSchools = new Parser({fields: ["GIAS reference", "Local Authority", "School Name", "Section41 Approval"]}).parse(indSpec);
     fs.writeFileSync("IndSpec_not_s41.csv", indSpecSchools);
-    console.log(indSpecSchools)
+    //console.log(indSpecSchools)
 
 })();
 
@@ -160,6 +160,13 @@ Part 3: Analyse and present a finding
 
 
 Have a look around in the dataset - perhaps do some basic analysis - and see what interesting things emerge from the dataset or from the process. Ultimately what you need to do now is articulate what you see as the one significant finding (in no more than 50 words). 
+
+*/
+
+
+/******************** My Official Findings and Analysis ***********************/
+
+/*
 
 */
 
