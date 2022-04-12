@@ -1,6 +1,6 @@
 # 🔖 data-extraction-for-the-peoples-newsroom-of-TBIJ 📚
 
-# ✨ The bureau of Investigative journalist 👩‍💼🎤📖
+# ✨ The bureau of Investigative Journalist 👩‍💼🎤📖
 
 📊 The take-home challenge for the People’s Newsroom team at The Bureau of Investigative Journalism (TBIJ) is to combine datasets and produce at least one interesting finding! 📉
 
